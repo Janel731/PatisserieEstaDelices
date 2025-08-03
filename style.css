@@ -1,0 +1,292 @@
+:root{
+    --size:170px;  /*taille des losanges*/
+    --spacing:10px;/*espaces entre les losanges*/
+    --marron:#5C3A21;
+    --primary:#8B4513;
+    --color2: #c58f31;
+}
+
+body{
+    margin: 0;
+    /* height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background:linear-gradient(to bottom, #ffffff 0%, #fff8f0 50%, #faebd7 100%); */
+    overflow-x: hidden;
+    background-color: rgba(217, 170, 196, 0.5);
+
+}
+
+ 
+   
+
+#square{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: calc(var(--size)*2 + var(--spacing));
+    height: calc(var(--size)*2 + var(--spacing));
+    padding: 5px;
+    overflow: hidden;
+
+}
+
+.diamond{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: #007bff;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+}
+
+.top{
+    top: 0;
+    left: calc(50% - var(--size)/2);
+    animation-name: diamondtop;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes diamondtop{
+    from{
+        top:-50%;
+    }
+
+    to{
+        top: 0;
+    }
+}
+
+
+
+.left{
+    top: calc(50% - var(--size)/2);
+    left: 0;
+    animation-name: diamondleft;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    }
+
+    @keyframes diamondleft{
+    from{
+        left:-50%;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+.right{
+    top: calc(50% - var(--size)/2);
+    right: 0;
+    animation-name: diamondright;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes diamondright{
+    from{
+        right:-50%;
+    }
+
+    to{
+        right: 0;
+    }
+}	
+
+.bottom{
+    bottom: 0;
+    left: calc(50% - var(--size)/2);
+    animation-name: diamondbottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes diamondbottom{
+    from{
+        bottom:-50%;
+    }
+
+    to{
+        bottom: 0;
+    }
+}
+.brand{
+    width: 500px;
+    padding: 10px;
+   
+}
+
+.brand p{
+    font-style: italic;
+    font-size: 3em;
+    font-family: "Playfair Display";
+}
+
+#Patisserie h1{
+    font-family: "Merienda";
+}
+
+#Patisserie h4, p{
+    font-family: "Lora";
+}
+
+#slog{
+    max-width: 420px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+#slog p{
+    font-size: 1.3em;
+    color: #5C3A21;
+    animation-name: para;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    
+}
+
+@keyframes para{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.cercle-exterieur{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 20%;
+    margin: 40px auto;
+    border-radius: 50%;
+    background:linear-gradient(135deg, #fff6e5, #ffd700) ;
+}
+
+.cercle-interieur2{
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 100px 0 60px rgba(217, 170, 196, 1);
+}
+:is(.cercle-interieur, .cercle-interieur2){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* border: 2px solid #d4af37; */
+   
+}
+
+.patsImg{
+    width: 170%;
+   
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    /* z-index: 2; */
+}
+
+.story p{
+    color: #5e3c2c;
+}
+
+#bloc{
+    position: relative;
+    z-index: 10;
+    background-color: rgb(245, 245, 245);
+    /* opacity: 50%; */
+}
+
+#bloc h3, h5{
+    font-family:"Poppins";
+}
+
+.avisForm{
+    background-color: white;
+}
+
+#formulaire input{
+    width: 50%;
+}
+
+#formulaire textarea{
+    width: 50%;
+}
+
+footer{
+    background: #1f2737;
+    color: rgb(255, 255, 255);
+}
+
+footer p,a{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+li{
+    list-style: none;
+}
+
+li a{
+    text-decoration: none;
+    
+}
+
+.swal2-confirm:hover {
+    background-color: #d2691e;
+    filter: none;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+}
+
+@media screen and (max-width:768px) {
+    .brand{
+        width: 100%;
+        padding: 10px;
+       
+    }
+    
+    
+    .brand p{
+        font-size: 2.2em;
+        font-style: italic;
+        font-family: "Playfair Display";
+    }
+
+    :root{
+        --size:100px;  /*taille des losanges*/
+        --spacing:10px;/*espaces entre les losanges*/
+      
+    }
+
+    
+
+    #formulaire input{
+        width: 100%;
+    }
+    
+    #formulaire textarea{
+        width: 100%;
+    }
+   
+    
+}
+
+@media screen and (max-width:576px) {
+    #square{
+        display: none;
+     
+     }
+}
